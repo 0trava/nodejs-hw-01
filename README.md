@@ -2,9 +2,9 @@
 
 ### Крок 1
 ~~~
-Ініціалізуй проєкт за допомогою команди npm init
+Ініціалізуй проєкт за допомогою команди npm init ( $ npm init -y)
 В корені проєкту створи файл index.js
-Встанови пакет nodemon як залежність розробки (devDependencies)
+Встанови пакет nodemon як залежність розробки (devDependencies) ($ npm i -D nodemon)
 В файлі package.json додай "скрипти" для запуску index.js
 Скрипт start, який запускає index.js за допомогою node
 Скрипт dev, який запускає index.js за допомогою nodemon
