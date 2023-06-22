@@ -18,8 +18,10 @@ const getContactById = async(contactId) => {
 
 const removeContact = async(contactId) => {
     const contacts = await JSON.parse(await fs.readFile(contactsPath));
-    const findContact = contacts.indexOf((contact) => contact.id === contactId);
+    const findContact = contacts.find((contact) => contact.id === contactId);
     console.log(findContact);
+    console.log(contacts);
+    // contacts.slice()
     // !!!!
 
 }
