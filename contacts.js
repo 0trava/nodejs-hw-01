@@ -18,11 +18,18 @@ const getContactById = async(contactId) => {
 
 const removeContact = async(contactId) => {
     const contacts = await JSON.parse(await fs.readFile(contactsPath));
-    const findContact = contacts.find((contact) => contact.id === contactId);
-    console.log(findContact);
-    console.log(contacts);
-    // contacts.slice()
-    // !!!!
+    const getContact = contacts.findIndex((contact) => contact.id === contactId);
+    
+    if (getContact === -1) {
+        return null;
+    } else {
+        const removeContact = contacts[getContact];
+        contacts.splice(getContact, 1);
+        await fs.writeFile(contactsPath, JSON.stringify(contacts));
+        return removeContact;
+    }
+
+
 
 }
 
