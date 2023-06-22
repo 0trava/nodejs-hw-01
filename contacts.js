@@ -18,7 +18,7 @@ const getContactById = async(contactId) => {
 
 const removeContact = async(contactId) => {
     const contacts = await JSON.parse(await fs.readFile(contactsPath));
-    const getContact = contacts.findIndex((contact) => contact.id === contactId);
+    const getContact = contacts.findIndex(contact => contact.id === contactId);
     
     if (getContact === -1) {
         return null;
